@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Rincón del Sabor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #8b5e3c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #e6ccb2;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav a {
+      margin: 5px 15px;
+      text-decoration: none;
+      color: #5c3d2e;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #8b5e3c;
+    }
+    .hero {
+      text-align: center;
+    }
+    .hero img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .menu-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    /* Galería mejorada */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px; /* tamaño uniforme */
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+
+    /* Chatbot mejorado */
+    .chatbot {
+      font-family: Arial, sans-serif;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffff;
+      border: 2px solid #8b5e3c;
+      border-radius: 15px;
+      width: 340px;
+      max-height: 450px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    .chat-header {
+      background: #8b5e3c;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .chat-body {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: #fdf9f6;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-body p {
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 80%;
+    }
+    .chat-body p strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      color: #8b5e3c;
+    }
+    .chat-body .user {
+      background: #d9fdd3;
+      align-self: flex-end;
+    }
+    .chat-body .bot {
+      background: #f1f0f0;
+      align-self: flex-start;
+    }
+    .chat-input {
+      display: flex;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-top: 1px solid #ccc;
+      border-radius: 0 0 0 15px;
+    }
+    .chat-input button {
+      background: #8b5e3c;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 0 0 15px 0;
+    }
+
+    footer {
+      background: #5c3d2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>El Rincón del Sabor</h1>
+  <p>Sabores únicos en el corazón de CABA</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#historia">Nuestra Historia</a>
+  <a href="#menu">Menú General</a>
+  <a href="#sibo">Menú SIBO</a>
+  <a href="#contacto">Reservas & Contacto</a>
+  <a href="#ubicacion">Ubicación</a>
+  <a href="#qr">QR</a>
+</nav>
+
+<section id="inicio" class="hero">
+  <h2>Bienvenidos</h2>
+  <p>Disfruta de la mejor experiencia gastronómica con recetas pensadas para todos.</p>
+  <img src="https://i.pinimg.com/736x/8f/ee/76/8fee765f6f9586d315dc2c08c0ead533.jpg" alt="Restaurante El Rincón del Sabor">
+</section>
+
+<section id="historia">
+  <h2>Nuestra Historia</h2>
+  <p>Nacimos en el corazón de Buenos Aires con la misión de ofrecer platos sabrosos, saludables y de calidad. 
+  Nos apasiona brindar experiencias memorables con cada comida, respetando ingredientes frescos y seleccionados.</p>
+
+  <div class="gallery">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/16/53/fe/salon.jpg" alt="Interior del restaurante">
+    <img src="https://thumbs.dreamstime.com/b/mesa-servida-festiva-con-verduras-de-colores-saludables-y-papa-al-horno-pollo-en-la-cena-familiar-foto-174333288.jpg" alt="Mesa servida">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFdo0MtAiZeCOnjaDU-wt3EV-4jdjX15EYmA&s" alt="Cocina del restaurante">
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Menú General</h2>
+  <div class="menu-item">
+    <h3>Entradas</h3>
+    <p>Bruschettas variadas - $3500</p>
+    <p>Ensalada fresca de estación - $4200</p>
+  </div>
+  <div class="menu-item">
+    <h3>Platos principales</h3>
+    <p>Bife de chorizo con papas rústicas - $9500</p>
+    <p>Salmón grillado con vegetales - $12500</p>
+  </div>
+  <div class="menu-item">
+    <h3>Postres</h3>
+    <p>Flan casero con dulce de leche - $3000</p>
+    <p>Cheesecake de frutos rojos - $3500</p>
+  </div>
+  <div class="menu-item">
+    <h3>Bebidas</h3>
+    <p>Agua, gaseosas, vinos seleccionados y tragos de autor.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="https://www.dietfarma.com/wp-content/uploads/2024/08/guiso-de-cerdo-con-zanahoria-y-puerro.png" alt="Plato de carne">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/alimentos-de-espan-a-tintorera-6746d57716044.jpg?crop=0.667xw:1xh;center,top&resize=640:*" alt="Plato de pescado">
+    <img src="https://www.conasi.eu/blog/wp-content/uploads/2020/08/dieta-fodmaps-y-salud-intestina-des-1.jpg" alt="Postre">
+  </div>
+</section>
+
+<section id="sibo">
+  <h2>Menú Especial SIBO</h2>
+  <p>Platos diseñados bajos en carbohidratos fermentables.</p>
+  <ul>
+    <li>Bife magro grillado con puré de calabaza</li>
+    <li>Pescado al horno con espinacas</li>
+    <li>Tofu marinado con vegetales grillados</li>
+    <li>Ensalada de espinaca, zanahoria y tomate</li>
+    <li>Berenjenas grilladas con limón</li>
+    <li>Papas y boniatos al horno con especias</li>
+  </ul>
+  <div class="gallery">
+    <img src="https://i.blogs.es/6a3f0d/farhad-ibrahimzade-o_edxdljlz8-unsplash/450_1000.jpeg" alt="Plato saludable">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLDSAtPcVWWHN11zTvOg57hr-O2TA6CRxEpA&s" alt="Plato con vegetales">
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Reservas & Contacto</h2>
+  <form>
+    <input type="text" placeholder="Nombre" required><br><br>
+    <input type="tel" placeholder="Teléfono" required><br><br>
+    <input type="date" required><br><br>
+    <input type="time" required><br><br>
+    <button type="submit">Reservar</button>
+  </form>
+  <p>Teléfono: +54 11 5555 5555</p>
+  <p>Email: contacto@rincondelsabor.com</p>
+  <p>Horario: Martes a Domingo de 12:00 a 00:00</p>
+</section>
+
+<section id="ubicacion">
+  <h2>Ubicación</h2>
+  <iframe src="https://www.google.com/maps/embed/v1/place?q=Buenos+Aires,+Argentina&key=YOUR_API_KEY"></iframe>
+</section>
+
+<!-- QR -->
+<section id="qr" style="text-align:center;">
+  <h2>Escanea y chatea con nuestra IA 🤖</h2>
+  <p>Apunta tu cámara al QR para ingresar desde tu celular:</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tusitio.com" 
+       alt="QR para acceder a El Rincón del Sabor">
+</section>
+
+<footer>
+  <p>Síguenos en redes sociales</p>
+  <p>
+    <a href="#">Facebook</a> | 
+    <a href="#">Instagram</a> | 
+    <a href="#">TikTok</a> | 
+    <a href="#">WhatsApp</a>
+  </p>
+  <p>&copy; 2025 El Rincón del Sabor</p>
+</footer>
+
+<!-- Chatbot -->
+<div class="chatbot" id="chatbot">
+  <div class="chat-header">ChatSIBO 🍲</div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Escribe un alimento...">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
+<script>
+  const recetas = {
+    "carne":["Bife magro grillado con puré de calabaza","Estofado de carne con papas y zanahorias"],
+    "cerdo":["Solomillo de cerdo con zanahorias glaseadas","Cerdo al horno con batatas"],
+    "pescado":["Pescado al horno con espinacas","Filete de pescado grillado con limón"],
+    "marisco":["Paella de mariscos con arroz blanco","Cazuela de mariscos con vegetales"],
+    "huevo":["Omelette de espinaca y tomate","Chauchas al vapor con huevo duro"],
+    "tofu":["Tofu marinado con vegetales grillados","Salteado de tofu con mijo"],
+    "espinaca":["Pescado al horno con espinacas","Omelette de espinaca y tomate","Ensalada de espinaca, zanahoria y tomate"],
+    "zanahoria":["Solomillo de cerdo con zanahorias glaseadas","Ensalada de espinaca, zanahoria y tomate","Crema de zanahoria con jengibre"],
+    "zucchini":["Salteado de zapallitos y morrón","Zucchini relleno con quinoa"],
+    "zapallito":["Arroz blanco con pollo y zapallitos","Salteado de zapallitos y morrón"],
+    "morrón":["Salteado de zapallitos y morrón","Morrón relleno con carne magra"],
+    "chaucha":["Chauchas al vapor con huevo duro","Salteado de chauchas con ajo"],
+    "tomate":["Omelette de espinaca y tomate","Pasta sin gluten con salsa de tomate fresco"],
+    "berenjena":["Berenjenas grilladas con limón","Berenjenas rellenas con quinoa"],
+    "lechuga":["Ensalada de espinaca, zanahoria y tomate","Wrap de lechuga con pollo"],
+    "frutilla":["Mix de frutillas y arándanos","Ensalada de frutas frescas"],
+    "arándano":["Mix de frutillas y arándanos","Smoothie de arándanos"],
+    "uva":["Mix de frutillas y arándanos","Ensalada fresca con uvas"],
+    "melón":["Ensalada de melón, ananá y kiwi","Melón con jamón crudo"],
+    "ananá":["Ensalada de melón, ananá y kiwi","Pollo salteado con ananá"],
+    "kiwi":["Ensalada de melón, ananá y kiwi","Parfait de kiwi con avena"],
+    "naranja":["Jugo natural de naranja y granada","Ensalada de pollo con gajos de naranja"],
+    "limón":["Berenjenas grilladas con limón","Pescado grillado al limón"],
+    "granada":["Jugo natural de naranja y granada","Ensalada fresca con granada"],
+    "arroz":["Arroz blanco con pollo y zapallitos","Paella de mariscos con arroz blanco"],
+    "papa":["Papas y boniatos al horno con especias","Estofado de carne con papas y zanahorias"],
+    "boniato":["Papas y boniatos al horno con especias","Cerdo al horno con batatas"],
+    "quinoa":["Quinoa con vegetales grillados","Berenjenas rellenas con quinoa","Zucchini relleno con quinoa"],
+    "avena":["Avena cocida con frutas permitidas","Parfait de kiwi con avena","Smoothie de arándanos con avena"],
+    "mijo":["Guiso de mijo con vegetales grillados","Salteado de tofu con mijo"],
+    "pasta":["Pasta sin gluten con salsa de tomate fresco","Ensalada fría de pasta sin gluten con vegetales"],
+    "maíz":["Tortilla de harina de maíz con vegetales","Polenta cremosa con salsa de tomate"]
+  };
+
+  // Mensaje inicial
+  window.onload = () => {
+    const chatBody = document.getElementById("chat-body");
+    chatBody.innerHTML += `<p class="bot"><strong>ChatSIBO 🤖</strong> ¡Hola! Dime un alimento y te recomendaré recetas.</p>`;
+  };
+
+  function sendMessage() {
+    const input = document.getElementById("user-input");
+    const message = input.value.toLowerCase();
+    const chatBody = document.getElementById("chat-body");
+
+    if(message.trim() === "") return;
+
+    chatBody.innerHTML += `<p class="user"><strong>Tú:</strong> ${message}</p>`;
+
+    let respuesta = "";
+    if(recetas[message]) {
+      respuesta = "Te recomiendo estas recetas:<br> - " + recetas[message].join("<br> - ");
+    } else {
+      respuesta = "Lo siento, no tengo recetas con ese alimento.";
+    }
+
+    chatBody.innerHTML += `<p class="bot"><strong>ChatSIBO 🤖</strong> ${respuesta}</p>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    input.value = "";
+  }
+</script>
+
+</body>
+</html>
